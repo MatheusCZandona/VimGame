@@ -1,4 +1,5 @@
-package com.googlecode.lanterna.vim;
+//package com.googlecode.lanterna.vim;
+package vimgame;
 
 import com.googlecode.lanterna.gui2.*;
 import com.googlecode.lanterna.input.KeyStroke;
@@ -32,17 +33,21 @@ public abstract class VimModes extends BasicWindow {
 
         if (currentMode == Mode.NORMAL) {
             if (key.getCharacter() != null) {
-                switch (key.getCharacter()) {
-                    case 'i': case 'a':
-                        switchMode(Mode.INSERT);
-                        return true;
-//                    case 'j': // Próximo campo
-//                        getTextGUI().getInteractableRenderer().nextFocus(getTextGUI().getFocusedInteractable());
-//                        return true;
-//                    case 'k': // Campo anterior
-//                        getTextGUI().getInteractableRenderer().previousFocus(getTextGUI().getFocusedInteractable());
-//                        return true;
-                }
+		    switch (key.getCharacter()) {
+    case 'i': case 'a':
+        switchMode(Mode.INSERT);
+        return true;
+        
+    case 'j': // Baixo
+    case 'l': // Direita
+        // Simula a tecla TAB para avançar o foco nativamente
+        return super.handleInput(new KeyStroke(KeyType.Tab));
+        
+    case 'k': // Cima
+    case 'h': // Esquerda
+        // Simula a tecla SHIFT+TAB (ReverseTab) para voltar o foco nativamente
+        return super.handleInput(new KeyStroke(KeyType.ReverseTab));
+}
             }
         }
         return super.handleInput(key);

@@ -1,4 +1,5 @@
-package com.googlecode.lanterna.vim;
+//package com.googlecode.lanterna.vim;
+package vimgame;
 
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.SimpleTheme;

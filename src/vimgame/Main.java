@@ -1,4 +1,5 @@
-package com.googlecode.lanterna.vim;
+//package com.googlecode.lanterna.vim;
+package vimgame;
 
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.gui2.*;

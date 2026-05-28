@@ -1,4 +1,4 @@
-package com.googlecode.lanterna.vim;
+package vimgame;
 
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
@@ -16,7 +16,7 @@ public class Menu extends VimModes {
 		this.setHints(Arrays.asList(Window.Hint.CENTERED, Window.Hint.NO_POST_RENDERING));
 		this.setFixedSize(new TerminalSize(largura, altura));
 
-		Themes.applyTheme(this);
+		//Themes.applyTheme(this);
 
 		Panel mainPanel = new Panel();
 		mainPanel.setLayoutManager(new LinearLayout(Direction.VERTICAL));

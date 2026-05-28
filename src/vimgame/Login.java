@@ -1,4 +1,5 @@
-package com.googlecode.lanterna.vim;
+//package com.googlecode.lanterna.vim;
+package vimgame;
 
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
@@ -9,7 +10,7 @@ import com.googlecode.lanterna.gui2.dialogs.MessageDialog;
 import com.googlecode.lanterna.gui2.dialogs.MessageDialogButton;
 
 // A classe Login AGORA É uma janela (estende BasicWindow)
-public class Login extends VimModes {
+public class Login extends BasicWindow {
 
 	private static int largura = 35;
 	private static int altura = 10;
